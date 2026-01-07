@@ -34,9 +34,26 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
+    // 动态更新版权年份
+    updateCopyrightYear();
+    
     // 标记当前活动页面
     markActivePage();
 });
+
+/**
+ * 动态更新版权年份
+ * 如果当前年份大于2026，显示为 "2026-当前年份"
+ * 否则只显示 "2026"
+ */
+function updateCopyrightYear() {
+    const currentYear = new Date().getFullYear();
+    const yearSpan = document.getElementById('copyright-year');
+    
+    if (yearSpan && currentYear > 2026) {
+        yearSpan.textContent = '-' + currentYear;
+    }
+}
 
 /**
  * 根据当前URL自动标记活动页面
