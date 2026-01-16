@@ -1,0 +1,1147 @@
+/* ========================================
+   Product Detail Page Styles
+   Recipe of Ulala
+   ======================================== */
+
+/* ========== Variables ========== */
+:root {
+    --primary-green: #B4CF9E;
+    --primary-dark: #8FB87A;
+    --primary-light: #D4E8C4;
+    
+    --score-excellent: #2D7A3E;
+    --score-good: #6BA551;
+    --score-warning: #E89D3C;
+    --score-danger: #C74A4A;
+    
+    --text-primary: #333333;
+    --text-secondary: #666666;
+    --text-light: #999999;
+    
+    --bg-white: #FFFFFF;
+    --bg-light: #F8F8F8;
+    --bg-green-light: #E8F5E9;
+    --bg-warning-light: #FFF8E1;
+    --bg-danger-light: #FFEBEE;
+    
+    --border-color: #E0E0E0;
+    --border-radius: 8px;
+    
+    --shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ========== Product Hero ========== */
+.product-hero {
+    margin: 40px 0;
+}
+
+.product-hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.product-image-container {
+    position: sticky;
+    top: 100px;
+}
+
+.product-image-large {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+}
+
+.product-hero-info {
+    padding: 20px 0;
+}
+
+.product-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.product-subtitle {
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.product-rating-block {
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.overall-score {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.score-number {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.score-number.score-excellent { color: var(--score-excellent); }
+.score-number.score-good { color: var(--score-good); }
+.score-number.score-warning { color: var(--score-warning); }
+.score-number.score-danger { color: var(--score-danger); }
+
+.score-max {
+    font-size: 24px;
+    color: var(--text-secondary);
+}
+
+.score-tagline {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.product-tags-main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.tag-positive {
+    background: var(--bg-green-light);
+    color: var(--score-good);
+}
+
+.tag-neutral {
+    background: var(--bg-light);
+    color: var(--text-secondary);
+}
+
+.tag-caution {
+    background: var(--bg-warning-light);
+    color: var(--score-warning);
+}
+
+.product-price-block {
+    margin-bottom: 24px;
+}
+
+.price-amount {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.price-unit {
+    font-size: 18px;
+    color: var(--text-secondary);
+}
+
+.amazon-button {
+    display: block;
+    width: 100%;
+    background: linear-gradient(135deg, #FF9900 0%, #FF7700 100%);
+    color: white;
+    text-align: center;
+    padding: 16px 24px;
+    border-radius: var(--border-radius);
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 8px rgba(255,153,0,0.3);
+}
+
+.amazon-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255,153,0,0.4);
+}
+
+/* ========== Product Summary ========== */
+.product-summary {
+    background: linear-gradient(135deg, #FFF8E1 0%, #FFFBF0 100%);
+    border-left: 4px solid #FFB534;
+    border-radius: var(--border-radius);
+    padding: 32px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.summary-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+}
+
+.summary-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.summary-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ========== Quick Decision ========== */
+.quick-decision {
+    background: var(--bg-green-light);
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin: 40px 0;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.decision-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.decision-box {
+    background: var(--bg-white);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    box-shadow: var(--shadow-sm);
+}
+
+.decision-recommend {
+    border-top: 4px solid var(--score-good);
+}
+
+.decision-consider {
+    border-top: 4px solid var(--score-warning);
+}
+
+.decision-avoid {
+    border-top: 4px solid var(--score-danger);
+}
+
+.decision-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.decision-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.decision-list li {
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.decision-list li::before {
+    content: "•";
+    position: absolute;
+    left: 8px;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.decision-recommend .decision-list li::before {
+    color: var(--score-good);
+}
+
+.decision-consider .decision-list li::before {
+    color: var(--score-warning);
+}
+
+.decision-avoid .decision-list li::before {
+    color: var(--score-danger);
+}
+
+.decision-list a {
+    color: var(--primary-dark);
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.decision-list a:hover {
+    color: var(--primary-green);
+}
+
+/* ========== Allergen Section ========== */
+.allergen-section {
+    margin: 40px 0;
+    padding: 32px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.section-title-small {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+}
+
+.allergen-note {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.allergen-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.allergen {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.allergen-yes {
+    background: var(--bg-danger-light);
+    color: var(--score-danger);
+}
+
+.allergen-no {
+    background: var(--bg-white);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+}
+
+/* ========== Nutrition Section ========== */
+.nutrition-section {
+    margin: 40px 0;
+}
+
+.section-intro {
+    font-size: 16px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.nutrition-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+}
+
+.nutrition-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nutrition-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.nutrition-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
+.nutrition-assessment {
+    margin-top: 12px;
+}
+
+.assessment-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.assessment-ok {
+    background: var(--bg-green-light);
+    color: var(--score-good);
+}
+
+.assessment-warning {
+    background: var(--bg-warning-light);
+    color: var(--score-warning);
+}
+
+.assessment-danger {
+    background: var(--bg-danger-light);
+    color: var(--score-danger);
+}
+
+.assessment-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* ========== Feeding Guide ========== */
+.feeding-guide {
+    background: var(--bg-green-light);
+    border-radius: var(--border-radius);
+    padding: 32px;
+    margin-top: 32px;
+}
+
+.feeding-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 20px;
+}
+
+.feeding-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 32px;
+}
+
+.feeding-example h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.feeding-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+}
+
+.feeding-list li {
+    padding: 8px 0;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.feeding-note {
+    background: var(--bg-white);
+    border-left: 3px solid var(--score-warning);
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.feeding-tips h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.feeding-tips ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feeding-tips li {
+    padding: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.feeding-tips li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--score-warning);
+    font-weight: 700;
+}
+
+/* ========== Ingredients Section ========== */
+.ingredients-section {
+    margin: 60px 0;
+}
+
+.ingredient-category {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.category-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.category-rating {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.rating-score {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.rating-ok {
+    background: var(--bg-green-light);
+    color: var(--score-good);
+}
+
+.rating-warning {
+    background: var(--bg-warning-light);
+    color: var(--score-warning);
+}
+
+.rating-danger {
+    background: var(--bg-danger-light);
+    color: var(--score-danger);
+}
+
+.rating-reason {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.ingredient-item {
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.ingredient-item:last-child {
+    border-bottom: none;
+}
+
+.ingredient-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    cursor: pointer;
+}
+
+.ingredient-main {
+    flex: 1;
+}
+
+.ingredient-name-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.ingredient-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ingredient-stars {
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.ingredient-take {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.ingredient-toggle {
+    background: var(--bg-light);
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.ingredient-toggle:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+.toggle-icon {
+    transition: transform 0.3s;
+}
+
+.ingredient-toggle.active .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.ingredient-detail {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px dashed var(--border-color);
+}
+
+.detail-content {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-primary);
+}
+
+.detail-section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 20px 0 12px 0;
+}
+
+.detail-section-title:first-child {
+    margin-top: 0;
+}
+
+.detail-content ul {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.detail-content li {
+    margin: 8px 0;
+}
+
+.info-box {
+    background: var(--bg-light);
+    border-left: 3px solid var(--primary-green);
+    border-radius: 4px;
+    padding: 16px;
+    margin: 16px 0;
+}
+
+.info-box.info-term {
+    border-left-color: #4A90E2;
+    background: #F0F7FF;
+}
+
+.info-box.info-warning {
+    border-left-color: var(--score-warning);
+    background: var(--bg-warning-light);
+}
+
+.info-box.info-note {
+    border-left-color: var(--primary-green);
+}
+
+.info-box strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.info-box p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.detail-comparison,
+.detail-recommendation {
+    background: var(--bg-green-light);
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.detail-comparison a,
+.detail-recommendation a {
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.category-summary {
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    margin-top: 24px;
+}
+
+.category-summary h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.category-summary p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 8px 0;
+}
+
+.category-recommendation {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.category-recommendation a {
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+/* ========== Full Ingredients Section ========== */
+.full-ingredients-section {
+    margin: 60px 0;
+    padding: 40px;
+    background: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.toggle-full-list {
+    width: 100%;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: 16px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s;
+}
+
+.toggle-full-list:hover {
+    background: var(--primary-dark);
+}
+
+.toggle-full-list .toggle-icon {
+    transition: transform 0.3s;
+}
+
+.toggle-full-list[aria-expanded="true"] .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.full-ingredients-content {
+    margin-top: 24px;
+}
+
+.copyable-box {
+    position: relative;
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.copyable-text {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--text-primary);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.copy-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.copy-button:hover {
+    background: var(--primary-dark);
+}
+
+.copy-button.copied {
+    background: var(--score-good);
+}
+
+.ai-usage-tip {
+    background: var(--bg-green-light);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.ai-usage-tip h4 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.ai-usage-tip > p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.example-prompts {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.prompt-example {
+    background: var(--bg-white);
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.prompt-example strong {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.prompt-example code {
+    display: block;
+    background: var(--bg-light);
+    padding: 12px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.data-source {
+    padding: 20px;
+    background: var(--bg-white);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.data-source p {
+    margin: 4px 0;
+}
+
+.warning-note {
+    color: var(--score-warning);
+    font-weight: 500;
+}
+
+/* ========== FAQ Section ========== */
+.faq-section {
+    margin: 60px 0;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 24px;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.faq-question:hover {
+    background: var(--bg-light);
+}
+
+.faq-q-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+    flex: 1;
+}
+
+.faq-toggle {
+    color: var(--primary-green);
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.faq-question[aria-expanded="true"] .faq-toggle {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 24px 20px 24px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.faq-answer p {
+    margin: 12px 0;
+}
+
+.faq-answer ul {
+    margin: 12px 0;
+    padding-left: 24px;
+}
+
+.faq-answer li {
+    margin: 8px 0;
+}
+
+.switching-schedule {
+    margin: 16px 0;
+}
+
+.switching-schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-white);
+}
+
+.switching-schedule th,
+.switching-schedule td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.switching-schedule th {
+    background: var(--bg-light);
+    font-weight: 600;
+}
+
+/* ========== Similar Products Section ========== */
+.similar-products-section {
+    margin: 60px 0;
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.recommendation-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: all 0.3s;
+}
+
+.recommendation-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-4px);
+}
+
+.rec-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.rec-image {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+}
+
+.rec-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rec-content {
+    padding: 20px;
+}
+
+.rec-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+}
+
+.rec-reason {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.rec-comparison {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-light);
+    border-top: 1px solid var(--border-color);
+    padding-top: 8px;
+    margin-top: 8px;
+}
+
+.back-to-list {
+    text-align: center;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 12px 32px;
+    background: var(--bg-light);
+    color: var(--text-primary);
+    text-decoration: none;
+    border-radius: 24px;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.back-button:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+/* ========== Responsive Design ========== */
+@media (max-width: 1024px) {
+    .product-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .product-image-container {
+        position: relative;
+        top: 0;
+    }
+    
+    .decision-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nutrition-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .feeding-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .recommendations-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-title {
+        font-size: 24px;
+    }
+    
+    .product-subtitle {
+        font-size: 16px;
+    }
+    
+    .score-number {
+        font-size: 36px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+    }
+    
+    .quick-decision {
+        padding: 24px;
+    }
+    
+    .allergen-section {
+        padding: 20px;
+    }
+    
+    .full-ingredients-section {
+        padding: 20px;
+    }
+    
+    .copyable-box {
+        padding: 16px;
+    }
+    
+    .copy-button {
+        position: static;
+        margin-top: 16px;
+        width: 100%;
+        justify-content: center;
+    }
+}
