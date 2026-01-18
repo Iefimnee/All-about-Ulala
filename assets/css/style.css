@@ -1,5 +1,5 @@
 /* ===============================================
-   Recipe of Ulala - 完整样式表 v2.0
+   The Ulala Recipe - 完整样式表 v3.0
    =============================================== */
 
 /* ======================
@@ -107,6 +107,12 @@ img {
 }
 
 /* Logo Styles */
+.logo {
+    font-size: var(--text-xl);
+    font-weight: 700;
+    color: var(--primary-dark);
+}
+
 .logo a {
     display: flex;
     flex-direction: column;
@@ -465,6 +471,14 @@ img {
     font-size: var(--text-sm);
 }
 
+.breadcrumb a {
+    color: var(--text-medium);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-dark);
+}
+
 .separator {
     margin: 0 var(--spacing-xs);
     color: var(--text-light);
@@ -599,15 +613,77 @@ img {
 }
 
 /* ======================
-   9. ⚠️ 过敏原标识
+   9. ⚠️ 过敏原信息区块（v3优化版）
    ====================== */
 .allergen-section {
-    margin-bottom: var(--spacing-2xl);
-    padding: var(--spacing-xl);
-    background-color: var(--bg-light);
+    background: #fff8f0;
+    border: 2px solid #ff9800;
     border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
 }
 
+.section-title-small {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.allergen-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.allergen-group {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+}
+
+.allergen-group-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.allergen-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.allergen-list li {
+    padding: 0.5rem 0.75rem;
+    background: #fff3e0;
+    border-left: 3px solid #ff9800;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.allergen-list-safe li {
+    background: #f1f8f4;
+    border-left-color: #4caf50;
+}
+
+.allergen-note {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* 旧版过敏原标签样式（向后兼容，如果页面还在用的话） */
 .allergen-tags {
     display: flex;
     flex-wrap: wrap;
@@ -625,25 +701,29 @@ img {
     cursor: default;
 }
 
-.allergen.yes {
+.allergen.yes,
+.allergen-yes {
     background-color: #FFE5E5;
     color: #D32F2F;
     border-color: #FFCDD2;
 }
 
-.allergen.yes:hover {
+.allergen.yes:hover,
+.allergen-yes:hover {
     background-color: #FFCDD2;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(211, 47, 47, 0.2);
 }
 
-.allergen.no {
+.allergen.no,
+.allergen-no {
     background-color: #E8F5E9;
     color: #2E7D32;
     border-color: #C8E6C9;
 }
 
-.allergen.no:hover {
+.allergen.no:hover,
+.allergen-no:hover {
     background-color: #C8E6C9;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(46, 125, 50, 0.2);
@@ -654,13 +734,6 @@ img {
    ====================== */
 .ingredients-section {
     margin-bottom: var(--spacing-2xl);
-}
-
-.section-title-small {
-    font-size: var(--text-xl);
-    font-weight: 700;
-    margin-bottom: var(--spacing-sm);
-    color: var(--text-dark);
 }
 
 .section-subtitle-small {
@@ -907,6 +980,8 @@ img {
     background-color: var(--bg-white);
     cursor: pointer;
     transition: background-color 0.3s ease;
+    width: 100%;
+    text-align: left;
 }
 
 .faq-question:hover {
@@ -939,16 +1014,117 @@ img {
 .faq-answer p {
     color: var(--text-medium);
     line-height: 1.7;
-    margin: 0;
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-answer ul {
+    margin: var(--spacing-sm) 0;
+    padding-left: var(--spacing-lg);
+}
+
+.faq-answer li {
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-medium);
+    line-height: 1.6;
 }
 
 /* ======================
-   14. 简化版相关产品推荐
+   14. 相关产品推荐（v3优化版）
    ====================== */
 .similar-products-section {
     margin-bottom: var(--spacing-2xl);
 }
 
+.section-intro {
+    text-align: center;
+    font-size: var(--text-base);
+    color: var(--text-medium);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.recommendations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+}
+
+.recommendation-card {
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+}
+
+.recommendation-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+    border-color: var(--primary-light);
+}
+
+.rec-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.rec-image {
+    width: 100%;
+    aspect-ratio: 1;
+    background-color: var(--bg-light);
+    overflow: hidden;
+}
+
+.rec-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recommendation-card:hover .rec-image img {
+    transform: scale(1.05);
+}
+
+.rec-content {
+    padding: var(--spacing-lg);
+}
+
+.rec-title {
+    font-size: var(--text-lg);
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-dark);
+    line-height: 1.4;
+}
+
+.rec-feature {
+    margin: 0.75rem 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-medium);
+}
+
+.rec-feature strong {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.rec-comparison {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    line-height: 1.5;
+}
+
+/* 简化版推荐卡片（向后兼容） */
 .simple-recommendations {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1000,7 +1176,8 @@ img {
 /* ======================
    15. Back Button
    ====================== */
-.back-to-products {
+.back-to-products,
+.back-to-list {
     margin: var(--spacing-2xl) 0;
     text-align: center;
 }
@@ -1092,7 +1269,18 @@ img {
 }
 
 /* ======================
-   17. Responsive Design
+   17. 隐藏评分相关元素（v3新增）
+   ====================== */
+.score-badge,
+.score-warning,
+.score-danger,
+.score-reason,
+.product-rating-simple {
+    display: none !important;
+}
+
+/* ======================
+   18. Responsive Design
    ====================== */
 
 /* Tablet */
@@ -1103,6 +1291,10 @@ img {
     }
     
     .recommendation-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .recommendations-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -1204,6 +1396,22 @@ img {
     }
     
     /* Allergens */
+    .allergen-section {
+        padding: 1.5rem;
+    }
+    
+    .section-title-small {
+        font-size: 1.3rem;
+    }
+    
+    .allergen-group {
+        padding: 1rem;
+    }
+    
+    .allergen-group-title {
+        font-size: 1rem;
+    }
+    
     .allergen-tags {
         gap: var(--spacing-sm);
     }
