@@ -12,7 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700&family=Noto+Sans+JP:wght@400;600&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="assets/css/product-detail.css">
+    <link rel="stylesheet" href="assets/css/1-base.css">
+<link rel="stylesheet" href="assets/css/2-components.css">
+<link rel="stylesheet" href="assets/css/4-product.css">
     
     <meta property="og:title" content="Royal Canin ミニ アダルト - The Ulala Recipe">
     <meta property="og:description" content="超高消化率90%。腸が弱い犬・老犬に最適。">
@@ -49,118 +51,85 @@
 
         <div class="container">
             
-            <!-- ========== SECTION 1: Hero区 ========== -->
-            <section class="product-hero">
-                <div class="product-hero-grid">
-                    <div class="product-image-container">
-                        <img src="assets/images/royal-canin-mini-adult-400.jpg" 
-                             alt="Royal Canin ミニ アダルト" 
-                             class="product-image-large"
-                             loading="lazy">
-                    </div>
-                    
-                    <div class="product-hero-info">
-                        <h1 class="product-title">Royal Canin ミニ アダルト</h1>
-                        
-                        <p class="product-oneliner">超高消化率90%。腸が弱い犬・老犬に最適。</p>
-                        
-                        <div class="quick-decision-card">
-                            <h3 class="decision-title">30秒で判断：このフードはあなたの犬に合う？</h3>
-                            
-                            <div class="decision-row decision-yes">
-                                <span class="decision-icon">✅</span>
-                                <div class="decision-content">
-                                    <strong>おすすめ：</strong>
-                                    <span class="decision-text">下痢しやすい・老犬・病後の回復期</span>
-                                    <span class="decision-why">（消化率90%で胃腸に優しい）</span>
-                                </div>
-                            </div>
-                            
-                            <div class="decision-row decision-no">
-                                <span class="decision-icon">❌</span>
-                                <div class="decision-content">
-                                    <strong>おすすめしない：</strong>
-                                    <span class="decision-text">食物アレルギーの原因を調べている最中</span>
-                                    <span class="decision-why">（複数のタンパク質が混ざっているため）</span>
-                                </div>
-                            </div>
-                            
-                            <div class="decision-row decision-no">
-                                <span class="decision-icon">❌</span>
-                                <div class="decision-content">
-                                    <strong>おすすめしない：</strong>
-                                    <span class="decision-text">自然派・オーガニック志向の飼い主</span>
-                                    <span class="decision-why">（穀物が多く、添加物あり）</span>
-                                </div>
-                            </div>
-                            
-                            <div class="decision-row decision-alert">
-                                <span class="decision-icon">⚠️</span>
-                                <div class="decision-content">
-                                    <strong>注意：</strong>
-                                    <span class="decision-text">鶏肉・魚・小麦・大豆のアレルギーがある犬</span>
-                                    <span class="decision-why">（これらの成分が含まれています）</span>
-                                </div>
-                            </div>
+            <!-- ========================================
+                 【A層】識別 & 決策入口層
+                 ======================================== -->
+            
+            <section class="layer-a">
+                <!-- A1. 页面身份 & 产品识别 -->
+                <div class="product-hero">
+                    <div class="product-hero-grid">
+                        <div class="product-image-container">
+                            <img src="assets/images/royal-canin-mini-adult-400.jpg" 
+                                 alt="Royal Canin ミニ アダルト" 
+                                 class="product-image-large"
+                                 loading="lazy">
                         </div>
                         
-                        <p class="price-info">¥400-600/kg · 3kg犬で月¥1,080</p>
+                        <div class="product-hero-info">
+                            <h1 class="product-title">Royal Canin ミニ アダルト</h1>
+                            <p class="product-oneliner">超高消化率90%。腸が弱い犬・老犬に最適。</p>
+                            
+                            <!-- A2. 快速结论卡 (30秒判断) -->
+                            <div class="quick-decision-card">
+                                <h3 class="decision-title">30秒チェック：うちの子に合う？</h3>
+                                
+                                <div class="decision-row decision-yes">
+                                    <span class="decision-icon">✅</span>
+                                    <div class="decision-content">
+                                        <strong>こんな子に最適：</strong>
+                                        <span class="decision-text">下痢しやすい・老犬・病後の回復期</span>
+                                        <span class="decision-why">（消化率90%で胃腸に優しい）</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="decision-row decision-no">
+                                    <span class="decision-icon">❌</span>
+                                    <div class="decision-content">
+                                        <strong>避けたほうがいい：</strong>
+                                        <span class="decision-text">アレルギー原因を調べている</span>
+                                        <span class="decision-why">（複数タンパク質混合）</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="decision-row decision-no">
+                                    <span class="decision-icon">❌</span>
+                                    <div class="decision-content">
+                                        <strong>避けたほうがいい：</strong>
+                                        <span class="decision-text">自然派・グレインフリー志向</span>
+                                        <span class="decision-why">（穀物40%含有）</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- A3. 成本感知提示 -->
+                            <p class="price-info">¥400-600/kg · 3kg犬で月¥1,080</p>
+                        </div>
                     </div>
+                </div>
+                
+                <div class="scroll-hint">
+                    ↓ 詳しく見る ↓
                 </div>
             </section>
 
-            <!-- ========== SECTION 2: 过敏原信息 ========== -->
-            <section class="allergen-section">
-                <h2 class="section-title-small">⚠️ アレルゲン情報</h2>
-                
-                <div class="allergen-intro">
-                    <p>💡 食物アレルギーがある犬には、原材料の確認が最も重要です。</p>
-                </div>
-                
-                <div class="allergen-content">
-                    <div class="allergen-group">
-                        <h3 class="allergen-group-title">⚠️ このフードに含まれるアレルゲン：</h3>
-                        <ul class="allergen-list allergen-list-warning">
-                            <li><strong>鶏肉、七面鳥、ダック</strong>（肉類として）</li>
-                            <li><strong>魚</strong>（加水分解タンパクとして）</li>
-                            <li><strong>小麦、トウモロコシ</strong>（炭水化物源）</li>
-                            <li><strong>大豆</strong>（油脂として）</li>
-                        </ul>
-                        <p class="allergen-note-warning">
-                            これらのアレルギーがある場合は、このフードは<strong>避けてください</strong>。
-                        </p>
-                    </div>
-                    
-                    <div class="allergen-group">
-                        <h3 class="allergen-group-title">✅ 含まれないアレルゲン：</h3>
-                        <ul class="allergen-list allergen-list-safe">
-                            <li>牛肉、ラム</li>
-                            <li>卵、乳製品</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="allergen-tip">
-                        <h4>💡 アレルギー対応が必要な場合は？</h4>
-                        <p>単一タンパク質のフードをおすすめします：</p>
-                        <ul>
-                            <li><a href="product-acana.html">Acana ラム</a>（ラム肉のみ）</li>
-                            <li><a href="product-pochi.html">Pochi サーモン</a>（サーモンのみ）</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
+            <div class="major-divider"></div>
 
-            <!-- ========== SECTION 3: 优缺点速览 ========== -->
-            <section class="pros-cons-section">
-                <h2 class="section-title">⚡ このフードの強み・弱み</h2>
+            <!-- ========================================
+                 【B層】結論展開 & 権衡層
+                 ======================================== -->
+            
+            <section class="layer-b">
+                <h2 class="section-title">このフードの強み・弱み</h2>
                 
                 <p class="section-intro">
-                    Royal Caninの特徴を理解して、あなたの犬に合うかどうか判断しましょう。
+                    細かい成分を見なくても判断できる
                 </p>
                 
+                <!-- B1. 强弱点总览 -->
                 <div class="pros-cons-grid">
                     <div class="pros-box">
-                        <h3 class="box-title">🟢 強み（このフードが優れている点）</h3>
+                        <h3 class="box-title">🟢 強み（優れている点）</h3>
                         <ul class="features-list">
                             <li>
                                 <div class="feature-header">
@@ -168,8 +137,7 @@
                                     <strong>超高消化率90%以上</strong>
                                 </div>
                                 <p class="feature-detail">
-                                    加水分解タンパク特許技術で、タンパク質を小さく分解。
-                                    <strong>胃腸が弱い犬、老犬、病後の回復期に最適</strong>です。
+                                    加水分解タンパク特許技術。胃腸が弱い犬、老犬、病後の回復期に最適。
                                 </p>
                             </li>
                             <li>
@@ -178,8 +146,7 @@
                                     <strong>獣医師の推薦率が高い</strong>
                                 </div>
                                 <p class="feature-detail">
-                                    科学的根拠に基づいた配合で、動物病院でもよく推奨されています。
-                                    信頼性の高いブランドです。
+                                    科学的根拠に基づいた配合。動物病院でもよく推奨される信頼性の高いブランド。
                                 </p>
                             </li>
                             <li>
@@ -188,24 +155,22 @@
                                     <strong>プレバイオティクス配合</strong>
                                 </div>
                                 <p class="feature-detail">
-                                    フラクトオリゴ糖（FOS）が腸内環境をサポート。
-                                    便の状態改善、免疫力向上に役立ちます。
+                                    フラクトオリゴ糖（FOS）が腸内環境をサポート。便の状態改善、免疫力向上。
                                 </p>
                             </li>
                         </ul>
                     </div>
                     
                     <div class="cons-box">
-                        <h3 class="box-title">🔴 弱み（このフードの問題点）</h3>
+                        <h3 class="box-title">🔴 弱み（問題点）</h3>
                         <ul class="features-list">
                             <li>
                                 <div class="feature-header">
                                     <span class="feature-icon">⚠️</span>
-                                    <strong>穀物が約40%を占める</strong>
+                                    <strong>穀物が約40%</strong>
                                 </div>
                                 <p class="feature-detail">
-                                    小麦粉・トウモロコシが主体で、しかも精製穀物。
-                                    <strong>グレインフリーや自然派志向には不向き</strong>です。
+                                    小麦粉・トウモロコシ主体の精製穀物。グレインフリー志向には不向き。
                                 </p>
                             </li>
                             <li>
@@ -214,231 +179,207 @@
                                     <strong>原料の透明度が低い</strong>
                                 </div>
                                 <p class="feature-detail">
-                                    "動物性油脂"など、何の動物か不明な表記が多い。
-                                    <strong>原材料にこだわる飼い主には物足りない</strong>でしょう。
+                                    「動物性油脂」など不明確な表記。原材料にこだわる飼い主には物足りない。
                                 </p>
                             </li>
                             <li>
                                 <div class="feature-header">
                                     <span class="feature-icon">📉</span>
-                                    <strong>タンパク質がやや低め（25%）</strong>
+                                    <strong>タンパク質やや低（25%）</strong>
                                 </div>
                                 <p class="feature-detail">
-                                    小型犬の理想は28-32%。25%は基準は満たしていますが、
-                                    <strong>活発な犬には少し物足りない</strong>可能性があります。
+                                    小型犬理想は28-32%。活発な犬には少し物足りない可能性。
                                 </p>
                             </li>
                         </ul>
                     </div>
                 </div>
                 
+                <!-- B2. 关键风险速览 -->
+                <div class="risk-alert">
+                    <h4>⚠️ 絶対に見逃せない注意点</h4>
+                    
+                    <div class="risk-item">
+                        <strong>🚫 アレルギー対応には不向き</strong>
+                        <p>鶏肉・魚・小麦・大豆を含む複数タンパク質。アレルギー原因の特定が困難。</p>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <strong>⚖️ 太りやすい犬は要調整</strong>
+                        <p>カロリー393kcal/100gはやや高め。避妊・去勢犬は給餌量を10-15%減らす必要あり。</p>
+                    </div>
+                    
+                    <div class="risk-item">
+                        <strong>🌾 グレインフリー希望者には不適</strong>
+                        <p>約40%が穀物（小麦・トウモロコシ）。自然派・オーガニック志向には合わない。</p>
+                    </div>
+                </div>
+                
                 <div class="balance-note">
-                    <h4>💡 結論：機能性重視のフード</h4>
+                    <h4>💡 つまり</h4>
                     <p>
-                        Royal Caninは<strong>「消化器サポート」</strong>に特化したフードです。
-                        原材料の質や透明度より、<strong>「胃腸が弱い犬を助ける」</strong>ことを
-                        優先して設計されています。
-                    </p>
-                    <p>
-                        健康な犬には、より原料品質の高いフード
-                        （<a href="product-acana.html">Acana</a>など）の方が適しているかもしれません。
+                        Royal Caninは<strong>「お腹に優しい」ことを最優先</strong>にしたフード。
+                        原材料の透明性よりも、胃腸が弱い子を助けることを重視した設計です。
                     </p>
                 </div>
             </section>
 
-            <!-- ========== SECTION 4: 营养成分 ========== -->
-            <section class="nutrition-simple">
-                <h2 class="section-title">📊 栄養成分の要点（4つの重要数値）</h2>
+            <div class="section-divider"></div>
+
+            <!-- ========================================
+                 【C層】場景適配層
+                 ======================================== -->
+            
+            <section class="layer-c">
+                <h2 class="section-title">このフードはこんな子に</h2>
                 
                 <p class="section-intro">
-                    主要な4つの栄養素を見れば、このフードが自分の犬に合うかどうかが分かります。
+                    あなたの愛犬に合うかどうか、具体的に確認
                 </p>
                 
-                <div class="nutrition-grid-simple">
-                    <div class="nutrition-card-mini">
-                        <div class="nutrient-name">タンパク質</div>
-                        <div class="nutrient-value">25%</div>
-                        <div class="nutrient-rating rating-warning">⚠️ やや低</div>
-                        <p class="nutrient-note">
-                            小型犬の理想は28-32%。<br>
-                            <strong>活発な犬には少し物足りない</strong>かも。
-                        </p>
-                        <p class="nutrient-impact">
-                            <strong>影響：</strong>筋肉量、被毛の健康、免疫機能
+                <div class="scenarios-grid">
+                    <!-- C1. 适合场景 -->
+                    <div class="scenario-card suitable">
+                        <h3 class="scenario-title">✅ お腹が弱い・下痢しやすい</h3>
+                        <div class="scenario-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="scenario-reason">
+                            消化率90%で胃腸に優しい。Royal Canin最大の強み。
                         </p>
                     </div>
                     
-                    <div class="nutrition-card-mini">
-                        <div class="nutrient-name">脂肪</div>
-                        <div class="nutrient-value">14%</div>
-                        <div class="nutrient-rating rating-ok">✅ 適正</div>
-                        <p class="nutrient-note">
-                            標準的な範囲内（12-18%）。<br>
-                            <strong>室内飼いの小型犬に適しています。</strong>
-                        </p>
-                        <p class="nutrient-impact">
-                            <strong>影響：</strong>エネルギー、皮膚・被毛の状態
+                    <div class="scenario-card suitable">
+                        <h3 class="scenario-title">✅ 老犬（7歳以上）</h3>
+                        <div class="scenario-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="scenario-reason">
+                            消化率が高く老犬の弱った胃腸に最適。栄養吸収率が落ちた老犬でもしっかり栄養摂取。
                         </p>
                     </div>
                     
-                    <div class="nutrition-card-mini">
-                        <div class="nutrient-name">繊維</div>
-                        <div class="nutrient-value">2.4%</div>
-                        <div class="nutrient-rating rating-danger">❌ 低い</div>
-                        <p class="nutrient-note">
-                            理想は3-5%。<br>
-                            <strong>便秘気味の犬には不向き</strong>です。
-                        </p>
-                        <p class="nutrient-impact">
-                            <strong>影響：</strong>腸内環境、便の状態、満腹感
+                    <!-- C2. 注意场景 -->
+                    <div class="scenario-card caution">
+                        <h3 class="scenario-title">⚠️ 避妊・去勢後で太りやすい</h3>
+                        <div class="scenario-rating">⭐⭐⭐</div>
+                        <p class="scenario-reason">
+                            カロリーやや高め（393kcal）。給餌量を10-15%減らすことを推奨。
                         </p>
                     </div>
                     
-                    <div class="nutrition-card-mini">
-                        <div class="nutrient-name">カロリー</div>
-                        <div class="nutrient-value">393kcal</div>
-                        <div class="nutrient-rating rating-warning">⚠️ やや高</div>
-                        <p class="nutrient-note">
-                            平均は350-380kcal。<br>
-                            <strong>避妊・去勢犬は太りやすい</strong>ので注意。
+                    <div class="scenario-card caution">
+                        <h3 class="scenario-title">⚠️ 運動量が多い</h3>
+                        <div class="scenario-rating">⭐⭐⭐</div>
+                        <p class="scenario-reason">
+                            タンパク質25%はやや低め。活発な犬は28-32%が理想。筋肉量維持に物足りない可能性。
                         </p>
-                        <p class="nutrient-impact">
-                            <strong>対策：</strong>給餌量を10-15%減らすことを検討
+                    </div>
+                    
+                    <!-- C3. 不适合场景 -->
+                    <div class="scenario-card unsuitable">
+                        <h3 class="scenario-title">❌ アレルギー原因を探している</h3>
+                        <div class="scenario-rating">⭐</div>
+                        <p class="scenario-reason">
+                            複数タンパク質混合で原因特定困難。
+                        </p>
+                        <p class="scenario-alternative">
+                            → 代わりに：<a href="#">Pochi サーモン</a>（単一タンパク質）
+                        </p>
+                    </div>
+                    
+                    <div class="scenario-card unsuitable">
+                        <h3 class="scenario-title">❌ 鶏肉アレルギー</h3>
+                        <div class="scenario-rating">⭐</div>
+                        <p class="scenario-reason">
+                            鶏肉・七面鳥・ダック含有。使用不可。
+                        </p>
+                        <p class="scenario-alternative">
+                            → 代わりに：<a href="#">Pochi サーモン</a>
+                        </p>
+                    </div>
+                    
+                    <div class="scenario-card unsuitable">
+                        <h3 class="scenario-title">❌ 穀物アレルギー</h3>
+                        <div class="scenario-rating">⭐</div>
+                        <p class="scenario-reason">
+                            小麦・トウモロコシ約40%。完全に不向き。
+                        </p>
+                        <p class="scenario-alternative">
+                            → 代わりに：<a href="#">Acana</a>（グレインフリー）
+                        </p>
+                    </div>
+                    
+                    <div class="scenario-card unsuitable">
+                        <h3 class="scenario-title">❌ 涙やけが気になる</h3>
+                        <div class="scenario-rating">⭐⭐</div>
+                        <p class="scenario-reason">
+                            穀物・添加物多く、涙やけ原因の可能性。
+                        </p>
+                        <p class="scenario-alternative">
+                            → 代わりに：<a href="#">Canidae ダック</a>
+                        </p>
+                    </div>
+                    
+                    <div class="scenario-card unsuitable">
+                        <h3 class="scenario-title">❌ 体重管理が必要</h3>
+                        <div class="scenario-rating">⭐⭐</div>
+                        <p class="scenario-reason">
+                            カロリー高め。減量犬には不向き。
+                        </p>
+                        <p class="scenario-alternative">
+                            → 代わりに：<a href="#">Royal Canin ライト</a>
+                        </p>
+                    </div>
+                    
+                    <div class="scenario-card unsuitable">
+                        <h3 class="scenario-title">❌ 子犬（1歳未満）</h3>
+                        <div class="scenario-rating">⭐⭐</div>
+                        <p class="scenario-reason">
+                            成長期専用フード推奨。
                         </p>
                     </div>
                 </div>
-                
-                <div class="nutrition-summary">
-                    <h3>💡 栄養成分から見た適性</h3>
-                    <div class="suitability-grid">
-                        <div class="suitable-yes">
-                            <strong>✅ 適している：</strong>
-                            <ul>
-                                <li>室内飼い・運動量少なめの小型犬</li>
-                                <li>標準的な活動量の成犬</li>
-                            </ul>
-                        </div>
-                        <div class="suitable-no">
-                            <strong>❌ 不向き：</strong>
-                            <ul>
-                                <li>活発で運動量が多い犬（タンパク質不足）</li>
-                                <li>避妊・去勢後で太りやすい犬（カロリー高め）</li>
-                                <li>便秘気味の犬（繊維が少ない）</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 详细营养分析（折叠） -->
-                <details class="nutrition-details">
-                    <summary class="details-trigger-large">
-                        📖 栄養成分を詳しく理解したい
-                    </summary>
-                    <div class="details-content">
-                        <div class="nutrition-analysis">
-                            <h3>タンパク質 25%（やや低め）</h3>
-                            <p><strong>解説：</strong>小型犬の理想的なタンパク質含有量は28-32%です。Royal Caninの25%はAAFCO基準（18%以上）は満たしていますが、活発な小型犬には少し物足りない可能性があります。</p>
-                            <p><strong>影響：</strong>筋肉量の維持、被毛の健康、免疫機能に関わります。運動量が多い犬や成長期には不足する可能性があります。</p>
-                            
-                            <h3>脂肪 14%（適正範囲）</h3>
-                            <p><strong>解説：</strong>小型犬の適正範囲は12-18%です。14%は標準的で、室内飼いの小型犬に適しています。</p>
-                            <p><strong>影響：</strong>エネルギー源として重要。多すぎると肥満、少なすぎると被毛のパサつきや皮膚トラブルの原因になります。</p>
-                            
-                            <h3>繊維 2.4%（低い）</h3>
-                            <p><strong>解説：</strong>理想的な食物繊維含有量は3-5%です。2.4%は低めで、便秘しやすい犬には不向きかもしれません。</p>
-                            <p><strong>影響：</strong>腸内環境、便の状態、満腹感に関わります。ただし、Royal Caninはビートパルプやフラクトオリゴ糖でこれを補っています。</p>
-                            
-                            <h3>カロリー 393kcal/100g（やや高め）</h3>
-                            <p><strong>解説：</strong>小型犬用フードの平均は350-380kcal/100g。393kcalはやや高めで、運動量が少ない室内犬には与えすぎに注意が必要です。</p>
-                            <p><strong>影響：</strong>肥満リスク。特に避妊・去勢後の犬は太りやすいため、給餌量を10-15%減らすことを検討してください。</p>
-                        </div>
-                    </div>
-                </details>
-
-                <!-- 给餌ガイド（折叠） -->
-                <details class="feeding-guide-details">
-                    <summary class="details-trigger-large">
-                        🍽️ 給餌量を正確に計算したい
-                    </summary>
-                    <div class="details-content">
-                        <div class="feeding-guide">
-                            <h3>体重別の1日の給餌量（目安）</h3>
-                            <table class="feeding-table">
-                                <thead>
-                                    <tr>
-                                        <th>体重</th>
-                                        <th>標準的な活動量</th>
-                                        <th>活発な犬</th>
-                                        <th>運動量少なめ</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>2kg</td>
-                                        <td>46g</td>
-                                        <td>53g</td>
-                                        <td>39g</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3kg</td>
-                                        <td>62g</td>
-                                        <td>72g</td>
-                                        <td>53g</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4kg</td>
-                                        <td>77g</td>
-                                        <td>89g</td>
-                                        <td>65g</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5kg</td>
-                                        <td>91g</td>
-                                        <td>105g</td>
-                                        <td>77g</td>
-                                    </tr>
-                                    <tr>
-                                        <td>6kg</td>
-                                        <td>104g</td>
-                                        <td>120g</td>
-                                        <td>88g</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            
-                            <div class="feeding-notes">
-                                <h4>💡 給餌量調整のポイント</h4>
-                                <ul>
-                                    <li><strong>避妊・去勢後：</strong>表の量から10-15%減らす</li>
-                                    <li><strong>老犬（7歳以上）：</strong>表の量から10-20%減らす</li>
-                                    <li><strong>体重増加傾向：</strong>週に1回体重測定し、増えていたら5-10%減量</li>
-                                    <li><strong>おやつを与える場合：</strong>1日の総カロリーの10%以内に抑え、フードを減らす</li>
-                                </ul>
-                                
-                                <h4>⚠️ 注意事項</h4>
-                                <p>上記は目安です。個体差、季節、健康状態により調整が必要です。理想体型を維持できる量を見つけることが重要です。</p>
-                            </div>
-                        </div>
-                    </div>
-                </details>
             </section>
 
-            <!-- ========== SECTION 5: 原材料理解 ========== -->
-            <section class="ingredients-section">
-                <h2 class="section-title">🔬 原材料を理解する</h2>
-                <div class="ingredients-intro">
-                    <p>💡 完整な原材料表とAI分析の活用方法は下記をご覧ください。</p>
+            <div class="major-divider"></div>
+
+            <!-- ========================================
+                 【D層】事実 & データ層
+                 ======================================== -->
+            
+            <section class="layer-d">
+                <h2 class="section-title">事実とデータ（検証用）</h2>
+                
+                <p class="section-intro">
+                    データで検証できる客観的な情報
+                </p>
+                
+                <!-- D1. 营养指标 -->
+                <h3>栄養指標（4つの重要数値）</h3>
+                <div class="data-table">
+                    <div class="data-row">
+                        <span class="data-label">タンパク質</span>
+                        <span class="data-value">25% <span style="color: #FF9800;">（⚠️ やや低）</span></span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">脂肪</span>
+                        <span class="data-value">14% <span style="color: #4CAF50;">（✅ 適正）</span></span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">繊維</span>
+                        <span class="data-value">2.4% <span style="color: #F44336;">（❌ 低い）</span></span>
+                    </div>
+                    <div class="data-row">
+                        <span class="data-label">カロリー</span>
+                        <span class="data-value">393kcal/100g <span style="color: #FF9800;">（⚠️ やや高）</span></span>
+                    </div>
                 </div>
                 
-                <!-- 完整原材料表（折叠） -->
+                <!-- D2. 官方成分表 (折叠) -->
                 <details class="full-ingredients-details">
                     <summary class="details-trigger-large">
-                        📋 完整な原材料表を見る（AIチャット分析用）
+                        📋 完整原材料表を見る（原文・未編集）
                     </summary>
                     <div class="details-content">
                         <div class="copyable-box">
-                            <div class="copyable-text" id="ingredientsText">
-<strong>【主要成分】</strong>
+                            <div class="copyable-text" id="ingredientsText"><strong>【主要成分】</strong>
 肉類（鶏、七面鳥、ダック）、小麦粉、コーン、動物性油脂、コーンフラワー、大麦、小麦、加水分解タンパク（鶏、七面鳥、魚）、超高消化性小麦タンパク（消化率90%以上）、コーングルテン、ビートパルプ、大豆油、酵母および酵母エキス、フラクトオリゴ糖、魚油（オメガ3系不飽和脂肪酸〔EPA+DHA〕源）、藻類油（EPA+DHA源）
 
 <strong>【栄養添加物】</strong>
@@ -448,270 +389,96 @@
 保存料（ソルビン酸カリウム）、酸化防止剤（ミックストコフェロール、ローズマリーエキス）
 
 <strong>【保証分析値】</strong>
-たんぱく質: 25.0%以上
-脂質: 14.0%以上
-粗繊維: 2.4%以下
-灰分: 7.0%以下
-水分: 10.5%以下
-食物繊維: 7.0%
-カロリー: 393kcal/100g
-                            </div>
+たんぱく質：25.0%以上
+脂質：14.0%以上
+粗繊維：2.4%以下
+灰分：7.0%以下
+水分：10.5%以下
+食物繊維：7.0%
+カロリー：393kcal/100g</div>
                             
-                            <button class="copy-button" onclick="copyIngredients()" aria-label="テキストをコピー">
+                            <button class="copy-button" onclick="copyIngredients()">
                                 <span class="copy-icon">📋</span>
                                 <span class="copy-text">コピー</span>
                             </button>
                         </div>
-                        
-                        <div class="ai-usage-tip">
-                            <h4>💡 AI分析の活用例</h4>
-                            <p>上記のテキストをコピーして、ChatGPTやClaude.aiに以下のように聞いてみましょう：</p>
-                            <div class="example-prompts">
-                                <div class="prompt-example">
-                                    <strong>例1: 基本的な質問</strong>
-                                    <code>この原材料表を分析して、うちの犬（チワワ、3歳、3kg、健康）に合うか教えてください。</code>
-                                </div>
-                                <div class="prompt-example">
-                                    <strong>例2: アレルギー確認</strong>
-                                    <code>この原材料の中に、鶏肉アレルギーの犬が避けるべき成分はありますか？</code>
-                                </div>
-                                <div class="prompt-example">
-                                    <strong>例3: 深掘り分析</strong>
-                                    <code>この原材料表から、タンパク質の質（動物性vs植物性の割合）と炭水化物源の質を分析してください。</code>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="data-source">
-                            <p><strong>📌 データ出典:</strong> Royal Canin日本公式サイト（2025年12月版）</p>
-                            <p><strong>最終更新:</strong> 2026年1月16日</p>
-                            <p class="warning-note">⚠️ 製品の配合は予告なく変更される場合があります。購入時は必ずパッケージの表示をご確認ください。</p>
-                        </div>
                     </div>
                 </details>
-
-                <!-- 专家级成分分析（折叠） -->
-                <details class="expert-analysis-details">
+                
+                <!-- D3. 添加物与基础信息 (折叠) -->
+                <details class="allergen-details">
                     <summary class="details-trigger-large">
-                        🔬 専門家レベルの成分分析を見る
+                        ⚠️ アレルゲン詳細情報
                     </summary>
                     <div class="details-content">
-                        <p class="expert-note">以下は、各成分の詳細な分析です。獣医学・栄養学の知識がある方向けの内容です。</p>
+                        <h4>含まれるアレルゲン：</h4>
+                        <ul>
+                            <li>鶏肉、七面鳥、ダック</li>
+                            <li>魚（加水分解タンパク）</li>
+                            <li>小麦、トウモロコシ</li>
+                            <li>大豆</li>
+                        </ul>
                         
-                        <div class="ingredient-category">
-                            <h3 class="category-title">🥩 タンパク源</h3>
-                            <div class="category-rating">
-                                <span class="rating-score rating-warning">🟡 中等（5/10点）</span>
-                                <span class="rating-reason">
-                                    <strong>理由：</strong>動物性タンパク質は含まれているが、
-                                    鶏・七面鳥・ダックの割合が不明で、アレルギー管理が困難
-                                </span>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>肉類（鶏、七面鳥、ダック）⭐⭐⭐</h4>
-                                <p><strong>これは何？</strong> 3種類の鳥類の肉を使用</p>
-                                <p><strong>メリット:</strong> 3種類の鳥類タンパク質でアミノ酸バランスが良い</p>
-                                <p><strong>デメリット:</strong> 各タンパク質の割合不明、アレルギー排查困難</p>
-                                <p><strong>評価：</strong> ✅ 品質は悪くないが、透明度に欠ける</p>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>加水分解タンパク（鶏、七面鳥、魚）⭐⭐⭐⭐⭐</h4>
-                                <p><strong>これは何？</strong> タンパク質を酵素で小さく分解したもの</p>
-                                <p><strong>なぜ使うの？</strong> 消化率を90%以上に高めるため</p>
-                                <p><strong>メリット：</strong> Royal Caninの特許技術。胃腸への負担が少ない</p>
-                                <p><strong>適用:</strong> 胃腸が弱い犬、老犬、病後の犬に最適</p>
-                                <p><strong>評価：</strong> 🏆 このフードの最大の強み</p>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>コーングルテン（トウモロコシタンパク質）⭐⭐</h4>
-                                <p><strong>これは何？</strong> トウモロコシから抽出したタンパク質</p>
-                                <p><strong>なぜ使うの？</strong> 安価にタンパク質含有量を増やすため</p>
-                                <p><strong>問題点：</strong> 
-                                    犬の体が利用しにくいタンパク質（必須アミノ酸が不足）。
-                                    "タンパク質25%"という数字を良く見せるための「かさ増し」と言えます。
-                                </p>
-                                <p><strong>評価：</strong> ⚠️ 安全性は問題ないが、栄養価は低い</p>
-                            </div>
-                        </div>
-                        
-                        <div class="ingredient-category">
-                            <h3 class="category-title">🌾 炭水化物源</h3>
-                            <div class="category-rating">
-                                <span class="rating-score rating-danger">🔴 差（3/10点）</span>
-                                <span class="rating-reason">
-                                    <strong>理由：</strong>精製穀物（小麦粉・トウモロコシ）が約40%を占め、
-                                    栄養価が低く血糖値への影響が大きい
-                                </span>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>小麦粉 + トウモロコシ ⭐⭐</h4>
-                                <p><strong>これは何？</strong> 精製された穀物（全粒穀物ではない）</p>
-                                <p><strong>なぜ使うの？</strong> 安価にフードのかさを増やすため</p>
-                                <p><strong>問題:</strong> 高GI食品で栄養価が低い、満腹感が少ない</p>
-                                <p><strong>影響:</strong> 血糖値の急上昇、肥満リスクの増加</p>
-                                <p><strong>評価：</strong> ❌ グレインフリー志向には完全に不向き</p>
-                            </div>
-                        </div>
-                        
-                        <div class="ingredient-category">
-                            <h3 class="category-title">🧈 脂肪・油脂</h3>
-                            <div class="category-rating">
-                                <span class="rating-score rating-danger">🔴 差（2/10点）</span>
-                                <span class="rating-reason">
-                                    <strong>理由：</strong>"動物性油脂"は何の動物か不明。
-                                    アレルギー管理が不可能で、品質の確認もできない
-                                </span>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>動物性油脂 ⭐</h4>
-                                <p><strong>これは何？</strong> 何の動物か記載されていない油脂</p>
-                                <p><strong>最大の問題:</strong> 透明度ゼロ。鶏？豚？牛？完全に不明</p>
-                                <p><strong>なぜ問題？</strong> 
-                                    <ul>
-                                        <li>アレルギー管理が不可能</li>
-                                        <li>品質が不明（レンダリング油脂の可能性も）</li>
-                                        <li>ロットごとに動物源が変わる可能性</li>
-                                    </ul>
-                                </p>
-                                <p><strong>評価：</strong> ❌ 高品質フードでは絶対に見られない表記</p>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>魚油 + 大豆油 ⭐⭐⭐⭐</h4>
-                                <p><strong>これは何？</strong> オメガ3とオメガ6脂肪酸の源</p>
-                                <p><strong>メリット:</strong> オメガ3（EPA+DHA）とオメガ6のバランスが良い</p>
-                                <p><strong>効果:</strong> 皮膚・被毛の健康、抗炎症作用、脳機能サポート</p>
-                                <p><strong>評価：</strong> ✅ この部分は高品質</p>
-                            </div>
-                        </div>
-                        
-                        <div class="ingredient-category">
-                            <h3 class="category-title">🌿 繊維・プレバイオティクス</h3>
-                            <div class="category-rating">
-                                <span class="rating-score rating-good">🟢 良（8/10点）</span>
-                                <span class="rating-reason">
-                                    <strong>理由：</strong>ビートパルプとフラクトオリゴ糖で
-                                    腸内環境を効果的にサポート
-                                </span>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>ビートパルプ ⭐⭐⭐⭐</h4>
-                                <p><strong>これは何？</strong> サトウダイコンから糖を抜いた繊維</p>
-                                <p><strong>なぜ使うの？</strong> 便の状態を安定させるため</p>
-                                <p><strong>メリット:</strong> 水溶性と不溶性繊維のバランスが良い</p>
-                                <p><strong>効果:</strong> 便の状態改善、腸内環境サポート</p>
-                                <p><strong>評価：</strong> ✅ 犬の消化器系に有益</p>
-                            </div>
-                            
-                            <div class="ingredient-analysis">
-                                <h4>フラクトオリゴ糖（FOS）⭐⭐⭐⭐⭐</h4>
-                                <p><strong>これは何？</strong> 善玉菌のエサになる糖</p>
-                                <p><strong>なぜ使うの？</strong> 腸内の善玉菌を増やすため</p>
-                                <p><strong>メリット:</strong> プレバイオティクス効果が科学的に実証されている</p>
-                                <p><strong>効果:</strong> 腸内フローラ改善、免疫力向上、便の臭い軽減</p>
-                                <p><strong>評価：</strong> 🏆 高品質な機能性成分</p>
-                            </div>
-                        </div>
-                        
-                        <div class="expert-conclusion">
-                            <h3>🎓 専門家の総合評価</h3>
-                            
-                            <div class="conclusion-summary">
-                                <p class="conclusion-main">
-                                    <strong>結論：</strong> Royal Canin ミニ アダルトは、
-                                    <strong class="highlight-functional">「機能性重視」</strong>のフードです。
-                                </p>
-                                <p>
-                                    原材料の質や透明度より、<strong>「胃腸が弱い犬をサポートする」</strong>
-                                    ことを優先して設計されています。
-                                </p>
-                            </div>
-                            
-                            <div class="strengths-weaknesses">
-                                <div class="strength-item">
-                                    <span class="icon">✅</span>
-                                    <div class="content">
-                                        <strong>消化器サポート：</strong>
-                                        加水分解タンパク、プレバイオティクスで<strong>腸が弱い犬に最適</strong>
-                                    </div>
-                                </div>
-                                <div class="strength-item">
-                                    <span class="icon">✅</span>
-                                    <div class="content">
-                                        <strong>科学的根拠：</strong>
-                                        獣医栄養学に基づいた配合、<strong>信頼性が高い</strong>
-                                    </div>
-                                </div>
-                                <div class="weakness-item">
-                                    <span class="icon">❌</span>
-                                    <div class="content">
-                                        <strong>原料透明度：</strong>
-                                        "動物性油脂"など曖昧な表記が多い、<strong>自然派には不向き</strong>
-                                    </div>
-                                </div>
-                                <div class="weakness-item">
-                                    <span class="icon">❌</span>
-                                    <div class="content">
-                                        <strong>穀物比率：</strong>
-                                        約40%の穀物は<strong>グレインフリー志向には合わない</strong>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="usage-recommendation">
-                                <h4>💡 おすすめの使い方</h4>
-                                <p>
-                                    健康維持の「メインフード」というより、
-                                    <strong>消化器系の問題がある犬、老犬、病後のリカバリー期</strong>に
-                                    「機能性フード」として使用するのが最適です。
-                                </p>
-                                
-                                <div class="scenario-examples">
-                                    <div class="scenario good">
-                                        <strong>✅ 最適なケース：</strong>
-                                        <ul>
-                                            <li>下痢が続いている犬の回復期</li>
-                                            <li>老犬で消化機能が落ちてきた</li>
-                                            <li>手術後の栄養サポート</li>
-                                        </ul>
-                                    </div>
-                                    <div class="scenario alternative">
-                                        <strong>⚠️ 他のフードも検討を：</strong>
-                                        <ul>
-                                            <li>健康で特に問題がない犬 → 
-                                                <a href="product-acana.html">Acana</a>など原料品質重視のフード</li>
-                                            <li>アレルギーの原因調査中 → 
-                                                単一タンパク質フード（Pochi、K9など）</li>
-                                            <li>自然派・オーガニック志向 → 
-                                                グレインフリーの高品質フード</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            
-
-                        </div>
+                        <h4>含まれないアレルゲン：</h4>
+                        <ul>
+                            <li>牛肉、ラム</li>
+                            <li>卵、乳製品</li>
+                        </ul>
                     </div>
                 </details>
+                
+                <!-- D4. AI工具提示 (新增) -->
+                <div class="diy-analysis-box">
+                    <h4>🤖 さらに詳しく知りたい方へ</h4>
+                    <p>上の原材料表をコピーして、ChatGPT/Claude.aiに貼り付けるだけ。</p>
+                    <p class="prompt-hint">
+                        例：「この原材料を分析して、うちの犬（チワワ、3歳、3kg、健康）に合うか教えて」
+                    </p>
+                    <p class="tool-note">→ あなたの愛犬専用の分析結果が無料で手に入ります</p>
+                </div>
             </section>
 
-            <!-- ========== SECTION 6: 其他产品展示 ========== -->
+            <div class="section-divider"></div>
+
+            <!-- ========================================
+                 【G層】信任與边界層
+                 ======================================== -->
+            
+            <section class="layer-g">
+                <!-- G1. 数据来源 -->
+                <div class="trust-badge">
+                    <p><strong>📌 データ出典：</strong> Royal Canin日本公式サイト（2025年12月版）</p>
+                    <p><strong>最終更新：</strong> 2026年1月16日</p>
+                </div>
+                
+                <!-- G2. 分析边界声明 -->
+                <div class="disclaimer">
+                    <h4>⚠️ 分析の限界について</h4>
+                    <p>この分析は一般的な情報提供を目的としています。</p>
+                    <ul style="margin-top: 10px; font-size: 13px;">
+                        <li>医療アドバイスではありません</li>
+                        <li>個体差があり、すべての犬に当てはまるわけではありません</li>
+                        <li>健康上の懸念がある場合は、必ず獣医師にご相談ください</li>
+                        <li>製品配合は予告なく変更される場合があります</li>
+                    </ul>
+                </div>
+            </section>
+
+            <div class="major-divider"></div>
+
+            <!-- ========================================
+                 導航區
+                 ======================================== -->
+            
             <section class="other-products-section">
                 <h2 class="section-title">👀 他の商品を見る</h2>
-                <p class="section-intro">他の商品と比較して、あなたの犬に最適なものを見つけましょう</p>
                 
                 <div class="other-products-grid">
                     <div class="other-product-card">
                         <div class="product-link">
-                            <img src="assets/images/products/acana-400.jpg" alt="Acana グラスフェッドラム" loading="lazy">
+                            <img src="assets/images/products/acana-400.jpg" alt="Acana" loading="lazy">
                             <h4>Acana グラスフェッドラム</h4>
-                            <p class="product-feature">グレインフリー、高タンパク（31%）、原料が明確</p>
+                            <p class="product-feature">グレインフリー、高タンパク（31%）、原料明確</p>
                         </div>
                     </div>
                     
@@ -759,7 +526,7 @@
             navigator.clipboard.writeText(text).then(() => {
                 const button = document.querySelector('.copy-button');
                 const originalText = button.querySelector('.copy-text').textContent;
-                button.querySelector('.copy-text').textContent = 'コピーしました！';
+                button.querySelector('.copy-text').textContent = 'コピーしました!';
                 setTimeout(() => {
                     button.querySelector('.copy-text').textContent = originalText;
                 }, 2000);

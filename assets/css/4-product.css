@@ -1,197 +1,60 @@
-/* ========================================
-   Product Detail CSS - VISUAL REFRESH v5.0
+/* ===============================================
+   4-product.css - 产品详情页专用样式
+   The Ulala Recipe - MVP v2.0
    
-   核心改变：
-   1. 只用绿色+灰色（删除所有红橙黄）
-   2. 大幅增加留白（mobile: 20px → 28px）
-   3. 去掉花哨边框（统一用淡阴影）
-   4. 卡片统一白底（用细线区分状态）
-   5. 字号加大（base: 15px → 16px）
-   ======================================== */
+   职责：
+   - 产品Hero区
+   - 快速决策卡
+   - 优缺点分析
+   - 场景适配网格
+   - 数据表格
+   - AI工具区
+   - 折叠详情
+   - 其他产品推荐
+   
+   特点：
+   - 只在product-*.html使用
+   - 继承base和components的样式
+   - 统一绿+灰配色系统
+   =============================================== */
 
-:root {
-    /* === 颜色系统 - 极简 === */
-    --green: #B4CF9E;
-    --green-light: #E8F5E9;
-    --green-dark: #8FB87A;
-    
-    --gray-900: #2c3e50;
-    --gray-700: #666;
-    --gray-500: #999;
-    --gray-300: #ddd;
-    --gray-100: #f5f5f5;
-    
-    --white: #fff;
-    
-    /* === 间距系统 - 加大留白 === */
-    --gap-xs: 12px;
-    --gap-sm: 16px;
-    --gap-md: 24px;
-    --gap-lg: 40px;
-    --gap-xl: 56px;
-    
-    /* === 字体系统 - 加大基础字号 === */
-    --text-sm: 14px;
-    --text-base: 16px;    /* 移动端基础 15→16 */
-    --text-lg: 18px;
-    --text-xl: 24px;
-    --text-2xl: 32px;
-    
-    /* === 视觉效果 - 统一 === */
-    --radius: 16px;        /* 圆角加大 8→16 */
-    --shadow: 0 2px 12px rgba(0,0,0,0.06);  /* 更柔和 */
-}
-
-/* ========================================
-   基础重置
-   ======================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', sans-serif;
-    font-size: var(--text-base);
-    line-height: 1.8;      /* 行高加大 1.6→1.8 */
-    color: var(--gray-900);
-    background: #fafafa;
-}
-
-.container {
-    max-width: 100%;
-    padding: 0 20px;       /* 移动端padding加大 16→20 */
-}
-
-@media (min-width: 768px) {
-    .container {
-        max-width: 1200px;
-        padding: 0 32px;
-    }
-}
-
-/* ========================================
-   通用卡片样式 - 统一设计
-   ======================================== */
-.card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: var(--gap-lg);    /* 内边距加大 */
-    box-shadow: var(--shadow);
-    margin-bottom: var(--gap-md);
-}
-
-/* ========================================
-   标题系统 - 简化
-   ======================================== */
-.section-title {
-    font-size: var(--text-xl);
-    font-weight: 700;
-    margin-bottom: var(--gap-lg);
-    color: var(--gray-900);
-    /* 删除下边框 - 太重 */
-}
-
-@media (min-width: 768px) {
-    .section-title {
-        font-size: var(--text-2xl);
-    }
-}
-
-.section-intro {
-    font-size: var(--text-sm);
-    color: var(--gray-700);
-    margin-bottom: var(--gap-md);
-    line-height: 1.8;
-}
-
-/* ========================================
-   分隔线 - 极简
-   ======================================== */
-.divider {
-    height: 1px;
-    background: var(--gray-300);
-    margin: var(--gap-xl) 0;
-    border: none;
-}
-
-/* ========================================
-   Header - 保持简洁
-   ======================================== */
-.header {
-    background: var(--white);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-}
-
-.logo {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--green-dark);
-}
-
-.nav-list {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-}
-
-.nav-link {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--gray-700);
-    padding: 8px 12px;
+.diy-analysis-box {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border-left: 4px solid #0ea5e9;
+    padding: 20px;
+    margin-top: 30px;
     border-radius: 8px;
-    transition: all 0.2s;
 }
 
-.nav-link:hover {
-    background: var(--gray-100);
-    color: var(--green-dark);
+.diy-analysis-box h4 {
+    margin: 0 0 10px 0;
+    color: #0369a1;
 }
 
-/* ========================================
-   Breadcrumb
-   ======================================== */
-.breadcrumb {
-    background: var(--gray-100);
-    padding: 16px 0;
+.diy-analysis-box p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.prompt-hint {
+    background: white;
+    padding: 12px;
+    border-radius: 6px;
     font-size: 14px;
+    color: #334155;
+    border: 1px dashed #cbd5e1;
 }
 
-.breadcrumb a {
-    color: var(--gray-700);
+.tool-note {
+    font-size: 13px;
+    color: #64748b;
+    font-style: italic;
 }
-
-.breadcrumb a:hover {
-    color: var(--green-dark);
-}
-
-.separator {
-    margin: 0 8px;
-    color: var(--gray-500);
-}
-
-.current {
-    color: var(--gray-900);
-    font-weight: 500;
-}
-
-/* ========================================
-   产品Hero区 - 简洁大方
-   ======================================== */
+/* ======================
+   Product Hero Section
+   ====================== */
 .product-hero {
-    margin: var(--gap-lg) 0;
+    margin: var(--gap-xl) 0;
 }
 
 .product-hero-grid {
@@ -202,15 +65,15 @@ body {
 @media (min-width: 768px) {
     .product-hero-grid {
         grid-template-columns: 1fr 1.2fr;
-        gap: var(--gap-xl);
+        gap: var(--gap-2xl);
     }
 }
 
-/* 产品图片 - 去掉多余装饰 */
+/* Product Image Container */
 .product-image-container {
     background: var(--white);
     border-radius: var(--radius);
-    padding: var(--gap-md);
+    padding: var(--gap-lg);
     box-shadow: var(--shadow);
 }
 
@@ -219,7 +82,12 @@ body {
     border-radius: 12px;
 }
 
-/* 产品标题 */
+/* Product Hero Info */
+.product-hero-info {
+    display: flex;
+    flex-direction: column;
+}
+
 .product-title {
     font-size: 28px;
     font-weight: 700;
@@ -242,12 +110,22 @@ body {
     line-height: 1.7;
 }
 
-/* 快速决策卡片 - 极简版 */
+.price-info {
+    font-size: 15px;
+    color: var(--gray-700);
+    margin-top: var(--gap-md);
+    padding-top: var(--gap-md);
+    border-top: 1px solid var(--gray-100);
+}
+
+/* ======================
+   Quick Decision Card
+   ====================== */
 .quick-decision-card {
     background: var(--white);
-    border: 1px solid var(--gray-300);  /* 细边框代替粗边框 */
+    border: 1px solid var(--gray-300);
     border-radius: var(--radius);
-    padding: var(--gap-md);
+    padding: var(--gap-lg);
     margin: var(--gap-md) 0;
 }
 
@@ -272,7 +150,6 @@ body {
     border-bottom: none;
 }
 
-/* 删除yes/no的红绿色背景 */
 .decision-icon {
     font-size: 20px;
     flex-shrink: 0;
@@ -285,6 +162,7 @@ body {
 .decision-text {
     font-weight: 500;
     color: var(--gray-900);
+    display: block;
 }
 
 .decision-why {
@@ -294,17 +172,50 @@ body {
     margin-top: 4px;
 }
 
-.price-info {
-    font-size: 15px;
+/* Scroll Hint */
+.scroll-hint {
+    text-align: center;
     color: var(--gray-700);
-    margin-top: var(--gap-md);
-    padding-top: var(--gap-md);
-    border-top: 1px solid var(--gray-100);
+    font-size: 14px;
+    margin-top: 30px;
+    animation: bounce 2s infinite;
 }
 
-/* ========================================
-   优缺点 - 统一白底，只用细线区分
-   ======================================== */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+/* ======================
+   Dividers
+   ====================== */
+.section-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--gray-300), transparent);
+    margin: 60px 0;
+}
+
+.major-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--green), transparent);
+    margin: 80px 0;
+}
+
+/* ======================
+   Layer Spacing System
+   ====================== */
+.layer-a { margin-bottom: 60px; }
+.layer-b { margin-bottom: 80px; }
+.layer-c { margin-bottom: 80px; }
+.layer-d { margin-bottom: 60px; }
+.layer-e { margin-bottom: 60px; }
+.layer-f { margin-bottom: 60px; }
+.layer-g { margin-bottom: 40px; }
+
+/* ======================
+   Pros & Cons Section
+   ====================== */
 .pros-cons-grid {
     display: grid;
     gap: var(--gap-md);
@@ -318,17 +229,15 @@ body {
     }
 }
 
-/* 统一白底卡片 */
 .pros-box,
 .cons-box {
     background: var(--white);
     border-radius: var(--radius);
     padding: var(--gap-lg);
     box-shadow: var(--shadow);
-    border-left: 4px solid var(--gray-300);  /* 默认灰色 */
+    border-left: 4px solid var(--gray-300);
 }
 
-/* 只用细线颜色区分 */
 .pros-box {
     border-left-color: var(--green);
 }
@@ -354,7 +263,6 @@ body {
     position: relative;
 }
 
-/* 简化图标 */
 .features-list li::before {
     content: '•';
     position: absolute;
@@ -373,6 +281,13 @@ body {
 
 .feature-header {
     margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.feature-icon {
+    font-size: 18px;
 }
 
 .feature-header strong {
@@ -387,13 +302,15 @@ body {
     line-height: 1.7;
 }
 
-/* 风险提示 - 去掉红色背景 */
+/* ======================
+   Risk Alert
+   ====================== */
 .risk-alert {
     background: var(--white);
     border: 1px solid var(--gray-300);
-    border-left: 4px solid var(--gray-700);  /* 用深灰代替红色 */
+    border-left: 4px solid var(--gray-700);
     border-radius: var(--radius);
-    padding: var(--gap-md);
+    padding: var(--gap-lg);
     margin: var(--gap-md) 0;
 }
 
@@ -416,6 +333,7 @@ body {
     display: block;
     margin-bottom: 6px;
     font-size: 15px;
+    color: var(--gray-900);
 }
 
 .risk-item p {
@@ -424,9 +342,29 @@ body {
     line-height: 1.7;
 }
 
-/* ========================================
-   场景卡片 - 统一白底设计
-   ======================================== */
+.balance-note {
+    background: var(--green-light);
+    border-left: 4px solid var(--green);
+    border-radius: var(--radius);
+    padding: var(--gap-md);
+    margin: var(--gap-md) 0;
+}
+
+.balance-note h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: var(--gray-900);
+}
+
+.balance-note p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--gray-700);
+}
+
+/* ======================
+   Scenarios Section
+   ====================== */
 .scenarios-grid {
     display: grid;
     gap: var(--gap-md);
@@ -445,22 +383,20 @@ body {
     }
 }
 
-/* 所有场景卡片统一白底 */
 .scenario-card {
     background: var(--white);
     border-radius: var(--radius);
     padding: var(--gap-md);
     border-left: 4px solid var(--gray-300);
     box-shadow: var(--shadow);
-    transition: all 0.3s;
+    transition: var(--transition);
 }
 
 .scenario-card:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-lg);
 }
 
-/* 只用左边框颜色区分 - 删除背景色 */
 .scenario-card.suitable {
     border-left-color: var(--green);
 }
@@ -494,7 +430,7 @@ body {
 .scenario-alternative {
     background: var(--gray-100);
     padding: 12px;
-    border-radius: 8px;
+    border-radius: var(--radius-sm);
     font-size: 14px;
     margin-top: 12px;
 }
@@ -504,9 +440,13 @@ body {
     font-weight: 600;
 }
 
-/* ========================================
-   数据表格 - 简化
-   ======================================== */
+.scenario-alternative a:hover {
+    text-decoration: underline;
+}
+
+/* ======================
+   Data Tables
+   ====================== */
 .data-table {
     background: var(--gray-100);
     border-radius: var(--radius);
@@ -537,64 +477,9 @@ body {
     color: var(--gray-700);
 }
 
-/* ========================================
-   折叠详情 - 极简
-   ======================================== */
-details {
-    margin: var(--gap-md) 0;
-}
-
-.details-trigger-large {
-    cursor: pointer;
-    background: var(--white);
-    border: 1px solid var(--gray-300);
-    border-radius: var(--radius);
-    padding: 20px;
-    font-weight: 600;
-    font-size: 16px;
-    text-align: center;
-    list-style: none;
-    transition: all 0.2s;
-    display: block;
-    width: 100%;
-    color: var(--gray-900);
-}
-
-.details-trigger-large:hover {
-    border-color: var(--green);
-    background: var(--green-light);
-}
-
-.details-trigger-large::marker,
-.details-trigger-large::-webkit-details-marker {
-    display: none;
-}
-
-.details-trigger-large::before {
-    content: '▼ ';
-    color: var(--green);
-    margin-right: 8px;
-    font-size: 12px;
-    transition: transform 0.3s;
-    display: inline-block;
-}
-
-details[open] .details-trigger-large::before {
-    transform: rotate(180deg);
-}
-
-.details-content {
-    padding: var(--gap-lg);
-    border: 1px solid var(--gray-300);
-    border-top: none;
-    border-radius: 0 0 var(--radius) var(--radius);
-    margin-top: -1px;
-    background: var(--white);
-}
-
-/* ========================================
-   可复制框 - 简化
-   ======================================== */
+/* ======================
+   Copyable Box
+   ====================== */
 .copyable-box {
     position: relative;
     background: var(--gray-100);
@@ -617,19 +502,6 @@ details[open] .details-trigger-large::before {
     position: absolute;
     top: 12px;
     right: 12px;
-    background: var(--green);
-    color: var(--white);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
-    cursor: pointer;
-    transition: all 0.2s;
-}
-
-.copy-button:hover {
-    background: var(--green-dark);
 }
 
 @media (max-width: 480px) {
@@ -640,9 +512,9 @@ details[open] .details-trigger-large::before {
     }
 }
 
-/* ========================================
-   工具提示 - 统一绿色主题
-   ======================================== */
+/* ======================
+   Tool & Usage Tips
+   ====================== */
 .tool-intro {
     background: var(--green-light);
     border-left: 4px solid var(--green);
@@ -675,15 +547,13 @@ details[open] .details-trigger-large::before {
     color: var(--gray-700);
 }
 
-/* ========================================
-   使用提示 - 去掉橙色
-   ======================================== */
 .usage-tips {
     background: var(--white);
     border: 1px solid var(--gray-300);
     border-left: 4px solid var(--gray-700);
     border-radius: var(--radius);
     padding: var(--gap-md);
+    margin: var(--gap-md) 0;
 }
 
 .usage-tips h4 {
@@ -713,9 +583,91 @@ details[open] .details-trigger-large::before {
     font-size: 20px;
 }
 
-/* ========================================
-   信任标识
-   ======================================== */
+/* ======================
+   Nutrition Summary
+   ====================== */
+.nutrition-summary {
+    background: var(--white);
+    border: 1px solid var(--gray-300);
+    border-radius: var(--radius);
+    padding: var(--gap-lg);
+    margin: var(--gap-md) 0;
+}
+
+.nutrition-summary h3 {
+    font-size: 17px;
+    margin-bottom: var(--gap-md);
+    color: var(--gray-900);
+}
+
+.suitability-grid {
+    display: grid;
+    gap: var(--gap-md);
+    margin-top: var(--gap-md);
+}
+
+@media (min-width: 768px) {
+    .suitability-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.suitable-yes,
+.suitable-no {
+    padding: var(--gap-md);
+    border-radius: var(--radius-sm);
+}
+
+.suitable-yes {
+    background: var(--green-light);
+    border-left: 3px solid var(--green);
+}
+
+.suitable-no {
+    background: var(--gray-100);
+    border-left: 3px solid var(--gray-500);
+}
+
+.suitable-yes strong,
+.suitable-no strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+.suitable-yes ul,
+.suitable-no ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.suitable-yes li,
+.suitable-no li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 4px 0;
+    position: relative;
+}
+
+.suitable-yes li::before {
+    content: '✓';
+    position: absolute;
+    left: -20px;
+    color: var(--green);
+    font-weight: 700;
+}
+
+.suitable-no li::before {
+    content: '✗';
+    position: absolute;
+    left: -20px;
+    color: var(--gray-500);
+    font-weight: 700;
+}
+
+/* ======================
+   Trust & Disclaimers
+   ====================== */
 .trust-badge {
     background: var(--gray-100);
     border: 1px solid var(--gray-300);
@@ -723,6 +675,7 @@ details[open] .details-trigger-large::before {
     padding: var(--gap-md);
     font-size: 14px;
     color: var(--gray-700);
+    margin: var(--gap-md) 0;
 }
 
 .trust-badge p {
@@ -756,14 +709,85 @@ details[open] .details-trigger-large::before {
     padding-left: 24px;
 }
 
-/* ========================================
-   其他产品推荐
-   ======================================== */
+/* ======================
+   Allergen Section
+   ====================== */
+.allergen-section {
+    background: #fff8f0;
+    border: 2px solid #ff9800;
+    border-radius: var(--radius);
+    padding: var(--gap-lg);
+    margin: var(--gap-md) 0;
+}
+
+.section-title-small {
+    font-size: var(--text-lg);
+    font-weight: 700;
+    color: var(--gray-900);
+    margin-bottom: var(--gap-md);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.allergen-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-md);
+}
+
+.allergen-group {
+    background: var(--white);
+    padding: var(--gap-md);
+    border-radius: var(--radius-sm);
+}
+
+.allergen-group-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-900);
+    margin-bottom: 12px;
+}
+
+.allergen-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.allergen-list li {
+    padding: 8px 12px;
+    background: #fff3e0;
+    border-left: 3px solid #ff9800;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.allergen-list-safe li {
+    background: #f1f8f4;
+    border-left-color: #4caf50;
+}
+
+.allergen-note {
+    background: var(--white);
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--gray-700);
+}
+
+/* ======================
+   Other Products Section
+   ====================== */
 .other-products-section {
     background: var(--gray-100);
     border-radius: var(--radius);
-    padding: var(--gap-xl) 0;
-    margin: var(--gap-xl) 0;
+    padding: var(--gap-2xl) 0;
+    margin: var(--gap-2xl) 0;
 }
 
 .other-products-grid {
@@ -791,12 +815,16 @@ details[open] .details-trigger-large::before {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: all 0.3s;
+    transition: var(--transition);
 }
 
 .other-product-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-lg);
+}
+
+.other-product-card .product-link {
+    display: block;
 }
 
 .other-product-card img {
@@ -820,7 +848,7 @@ details[open] .details-trigger-large::before {
     line-height: 1.7;
 }
 
-/* Coming Soon */
+/* Coming Soon Mini Card */
 .other-product-card.coming-soon {
     background: linear-gradient(135deg, #f8f8f8, #efefef);
     border: 2px dashed var(--gray-300);
@@ -828,6 +856,11 @@ details[open] .details-trigger-large::before {
     align-items: center;
     justify-content: center;
     min-height: 320px;
+}
+
+.other-product-card.coming-soon:hover {
+    transform: none;
+    box-shadow: var(--shadow);
 }
 
 .coming-soon-mini {
@@ -854,111 +887,51 @@ details[open] .details-trigger-large::before {
     padding: 0;
 }
 
-/* 返回按钮 */
-.back-to-list {
-    text-align: center;
-    margin-top: var(--gap-lg);
-    padding: 0 20px;
-}
-
-.back-button {
-    display: inline-block;
-    padding: 14px 32px;
-    background: var(--white);
-    border: 2px solid var(--green);
-    border-radius: var(--radius);
-    color: var(--green-dark);
-    font-weight: 600;
-    font-size: 15px;
-    transition: all 0.2s;
-}
-
-.back-button:hover {
-    background: var(--green);
-    color: var(--white);
-}
-
-/* ========================================
-   Footer
-   ======================================== */
-.footer {
-    background: var(--gray-900);
-    color: var(--white);
-    padding: var(--gap-xl) 0 var(--gap-lg);
-    margin-top: var(--gap-xl);
-}
-
-.footer-content {
-    text-align: center;
-}
-
-.footer-logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: var(--green);
-    margin-bottom: 8px;
-}
-
-.footer-tagline {
-    color: #bbb;
-    font-size: 15px;
-    margin-bottom: var(--gap-md);
-}
-
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: var(--gap-md);
-}
-
-.footer-links a {
-    color: var(--white);
-    font-size: 15px;
-    transition: color 0.2s;
-}
-
-.footer-links a:hover {
-    color: var(--green);
-}
-
-.footer-separator {
-    color: #666;
-}
-
-.footer-copyright {
-    color: #888;
-    font-size: 14px;
-}
-
-/* ========================================
-   响应式 - 移动端微调
-   ======================================== */
-@media (max-width: 480px) {
-    :root {
-        --gap-lg: 32px;
-        --gap-xl: 48px;
+/* ======================
+   Responsive - Mobile
+   ====================== */
+@media (max-width: 767px) {
+    .product-hero-grid {
+        grid-template-columns: 1fr;
     }
     
     .product-title {
         font-size: 24px;
     }
     
-    .section-title {
-        font-size: 22px;
+    .pros-cons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .scenarios-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .suitability-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .other-products-grid {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    
+    .allergen-section {
+        padding: var(--gap-md);
+    }
+    
+    .section-title-small {
+        font-size: 16px;
     }
 }
 
-/* ========================================
-   打印样式
-   ======================================== */
+/* ======================
+   Print Styles
+   ====================== */
 @media print {
-    .header,
-    .footer,
-    .breadcrumb,
-    .back-button,
-    .copy-button {
+    .scroll-hint,
+    .copy-button,
+    .other-products-section {
         display: none;
     }
     
